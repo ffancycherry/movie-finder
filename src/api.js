@@ -1,4 +1,4 @@
-const API_KEY = '2a8854ea'; // замените на ваш ключ с omdbapi.com
+const API_KEY = '2a8854ea';
 const BASE_URL = 'https://www.omdbapi.com/';
 
 export async function searchMovies(query) {

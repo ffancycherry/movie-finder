@@ -12,7 +12,7 @@ export default function Home() {
   const handleSearch = async (query) => {
     const results = await searchMovies(query);
     if (results.length === 0) {
-        setError('Фильмы не найдены по вашему запросу.');
+        setError('Фильмы по вашему запросу не найдены.');
         setMovies([]);
     } else {
         setError('');
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <SearchBar onSearch={handleSearch} />
-      {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
+      {error && <p className={styles.error}>{error}</p>}
       <MovieList movies={movies} favorites={favorites} onToggleFavorite={handleToggleFavorite} />
     </>
   );
