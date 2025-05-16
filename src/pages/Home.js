@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <SearchBar onSearch={handleSearch} />
-      {error && <p style={{ color: 'tomato', textAlign: 'center' }}>{error}</p>}
+      {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
       <MovieList movies={movies} favorites={favorites} onToggleFavorite={handleToggleFavorite} />
     </>
   );

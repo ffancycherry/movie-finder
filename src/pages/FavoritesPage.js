@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MovieList from '../components/MovieList';
+import styles from '../styles/FavoritesPage.module.css';
 
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState([]);
@@ -23,13 +24,16 @@ export default function FavoritesPage() {
   });
 
   return (
-    <div>
+    <div className={styles.favWrapper}>
       <h2>Избранные фильмы</h2>
-      <label>Сортировать: </label>
-      <select value={sortMethod} onChange={(e) => setSortMethod(e.target.value)}>
-        <option value="title">По алфавиту</option>
-        <option value="year">По году</option>
-      </select>
+      <div className={styles.filter}>
+        <label>Сортировать: </label>
+        <select className={styles.select} value={sortMethod} onChange={(e) => setSortMethod(e.target.value)}>
+          <option value="title">по алфавиту</option>
+          <option value="year">по году</option>
+        </select>
+      </div>
+      
       <MovieList movies={sortedFavorites} favorites={favorites} onToggleFavorite={handleToggleFavorite} />
     </div>
   );

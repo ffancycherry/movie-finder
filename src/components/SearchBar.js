@@ -11,7 +11,7 @@ export default function SearchBar({ onSearch }) {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Название фильма..." />
+        <input className={styles.input} value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Название фильма..." />
         <button className={styles.button}>Найти</button>
     </form>
 

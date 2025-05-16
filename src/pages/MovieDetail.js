@@ -15,15 +15,16 @@ export default function MovieDetail() {
   if (!movie) return <div>Загрузка...</div>;
 
   return (
-    <div className={styles.container}>
-        <img src={movie.Poster} className={styles.poster} />
-        <div className={styles.info}>
-            <h2 className={styles.title}>{movie.Title} ({movie.Year})</h2>
-            <p><strong>Режиссер:</strong> {movie.Director}</p>
-            <p><strong>Актеры:</strong> {movie.Actors}</p>
-            <p><strong>Рейтинг:</strong> {movie.imdbRating}</p>
-            <p>{movie.Plot}</p>
-        </div>
+    <div className={styles.detailContainer}>
+      <img className={styles.poster} src={movie.Poster} alt={movie.Title} />
+      <div className={styles.info}>
+        <h2>{movie.Title} ({movie.Year})</h2>
+        <p><strong>Жанр:</strong> {movie.Genre}</p>
+        <p><strong>Режиссёр:</strong> {movie.Director}</p>
+        <p><strong>Актёры:</strong> {movie.Actors}</p>
+        <p><strong>Рейтинг:</strong> ⭐️ {movie.imdbRating}</p>
+        <p><strong>Описание:</strong><br />{movie.Plot}</p>
+      </div>
     </div>
   );
 }

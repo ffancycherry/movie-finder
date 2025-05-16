@@ -1,26 +1,37 @@
 .form {
   display: flex;
   justify-content: center;
-  gap: 10px;
   margin: 20px;
+  gap: 10px;
 }
 
 .input {
-  padding: 10px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50px;
   width: 300px;
-  border-radius: 4px;
   font-size: 16px;
+  font-weight: bold;
+  background-color: #2c2c2c;
+  color: white;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #aaa;
 }
 
 .button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  border-radius: 100px;
+  background: #A6FF00;
+  color: #2c2c2c;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #2c2c2c;
+  color: #FFFFFF;
 }
